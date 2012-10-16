@@ -1,14 +1,7 @@
-<% @sus.each do |playlist| %>
-	<%pl = client.playlist(playlist.playlist_id)%>
-	<%pl.videos.each do |video|%>
-		<%if video.unique_id == params[:id]%>
-			<%current_playlist = pl%>
-		<%end%>
-	<%end%>
-<%end%>
+
 <section id='content'>
-	<% if current_playlist %>
-		<h2 id="pTitle"><%= current_playlist.title %></h2>
+	<% if @current_playlist %>
+		<h2 id="pTitle"><%= @current_playlist.title %></h2>
 	<%end%>
 	<div id='video'>
 		<iframe class="" id="" type="text/html" width="595" height="490" src="<%= @video.embed_url %>" frameborder="0"></iframe>
@@ -22,9 +15,9 @@
 </section>
 <section id="temario">
 	<h2 id="pTitle">Temario</h2>
-			<% if current_playlist %>
+			<% if @current_playlist %>
 				<ul>
-					<% current_playlist.videos.each do |video|%>
+					<% @current_playlist.videos.each do |video|%>
 			
 					<li><a href="/video/<%= video.unique_id %>"><%= video.title %></a></li>
 					<%end%>
