@@ -1,0 +1,151 @@
+/*
+ * Prefixes
+*/
+$wk: -webkit;
+$o: -o;
+$ms: -ms;
+$moz: -moz;
+
+$minheight: 150px;
+$mxw: 100%;
+
+$fontBasic: 1em;
+
+*{
+	margin:0;
+	padding: 0;
+}
+
+body,html{
+	background: url('b/bpatt.jpg');
+	font-family: "Signika";
+	font-size: 10px;
+	color: #FFF;
+	width: $mxw;
+}
+
+header{
+	background: url('b/hpatt.jpg');
+	height: $minheight;
+	width:$mxw;
+	position: relative;
+}
+
+#brain{
+	background: url('b/mpatt.jpg');
+	height: $minheight * 3;
+	margin: 0 auto;
+	width:$mxw - 20;
+}
+
+#hp{
+	display: block;
+	margin: 0 auto;
+	height: $mxw;
+	width: $mxw - 20;
+}
+
+footer{
+	background: url('b/fpatt.jpg');
+	min-height: $minheight / 2;
+	width: $mxw;
+
+	#fcont{
+		margin:0 auto;
+		width: 80%;
+		padding: 3em 0;
+		#fsocial{
+			width:155px;
+			margin: 0 auto;
+			display: block;
+			vertical-align: middle;
+			img{
+				display: inline-block;
+				margin: 0 $fontBasic 0 0;
+				max-width: 4em;
+			}
+		}
+	}
+}
+
+::selection{
+	background: #0a562f;
+	color: #FFF;
+}
+
+
+nav{
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	/*height: $mxw;*/
+	font-size: $fontBasic *2;
+
+	a{
+		&:hover{
+		background: #0a562f;};
+		&:visited{color:#FFF;}
+		display:block;
+		color: #FFF;
+		height: 100%;
+		padding-left: $fontBasic / 2;
+		padding-right: $fontBasic / 2;
+
+		text-decoration: none;
+		width: 89%;
+	}	
+
+
+	#searcher{
+		vertical-align: middle;
+	}
+
+	ul{
+		list-style: none;
+		vertical-align: middle;
+		.sI{
+			margin-left: $fontBasic;
+			float:left;
+			position: relative;
+
+			&:hover ul{display:block;}
+
+			ul{
+				background: rgba(56,56,56,0.8);
+				display: none;
+				position: absolute;
+
+				li{
+					white-space: nowrap;
+					display: block;
+				}
+			}
+		}
+	}
+
+
+}
+
+#eye{
+	/*555x212*/
+	display: inline-block;
+	width:  30%;
+	height: 100%; 
+}
+
+#eye img{
+	width: 100%;
+}
+
+#searcher{
+	background: url(o/schr.png);
+}
+
+#pTitle{
+	display: block;
+	padding: ($fontBasic  * 2) 0 0 0; 
+	text-align: center;
+	font-weight: bold;
+	color: #000;
+	font-size: $fontBasic * 5;
+}

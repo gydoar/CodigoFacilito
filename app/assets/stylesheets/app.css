@@ -1,0 +1,110 @@
+/*
+ * Prefixes
+*/
+* {
+  margin: 0;
+  padding: 0; }
+
+body, html {
+  background: url("b/bpatt.jpg");
+  font-family: "Signika";
+  font-size: 10px;
+  color: #FFF;
+  width: 100%; }
+
+header {
+  background: url("b/hpatt.jpg");
+  height: 150px;
+  width: 100%;
+  position: relative; }
+
+#brain {
+  background: url("b/mpatt.jpg");
+  height: 450px;
+  margin: 0 auto;
+  width: 80%; }
+
+#hp {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: 80%; }
+
+footer {
+  background: url("b/fpatt.jpg");
+  min-height: 75px;
+  width: 100%; }
+  footer #fcont {
+    margin: 0 auto;
+    width: 80%;
+    padding: 3em 0; }
+    footer #fcont #fsocial {
+      width: 155px;
+      margin: 0 auto;
+      display: block;
+      vertical-align: middle; }
+      footer #fcont #fsocial img {
+        display: inline-block;
+        margin: 0 1em 0 0;
+        max-width: 4em; }
+
+::selection {
+  background: #0a562f;
+  color: #FFF; }
+
+nav {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  /*height: $mxw;*/
+  font-size: 2em; }
+  nav a {
+    display: block;
+    color: #FFF;
+    height: 100%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-decoration: none;
+    width: 89%; }
+    nav a:hover {
+      background: #0a562f; }
+    nav a:visited {
+      color: #FFF; }
+  nav #searcher {
+    vertical-align: middle; }
+  nav ul {
+    list-style: none;
+    vertical-align: middle; }
+    nav ul .sI {
+      margin-left: 1em;
+      float: left;
+      position: relative; }
+      nav ul .sI:hover ul {
+        display: block; }
+      nav ul .sI ul {
+        background: rgba(56, 56, 56, 0.8);
+        display: none;
+        position: absolute; }
+        nav ul .sI ul li {
+          white-space: nowrap;
+          display: block; }
+
+#eye {
+  /*555x212*/
+  display: inline-block;
+  width: 30%;
+  height: 100%; }
+
+#eye img {
+  width: 100%; }
+
+#searcher {
+  background: url(o/schr.png); }
+
+#pTitle {
+  display: block;
+  padding: 2em 0 0 0;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  font-size: 5em; }
