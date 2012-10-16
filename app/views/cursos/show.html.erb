@@ -1,3 +1,14 @@
-<% @playlist.videos.each do |video|%>
-	<a href="/video/<%= video.unique_id %>"><img src="<%= video.thumbnails[1].url %>" style='width:20%;'></a>
-<%end%>
+<section id='content'>
+	
+	<div id='video'>
+		<iframe class="" id="" type="text/html" width="595" height="490" src="<%= @playlist.videos[0].embed_url %>" frameborder="0"></iframe>
+	</div>
+	<div id='desc'>
+		<h2 id='pTitle'><%= @playlist.title %></h2>
+		<% @playlist.videos.each do |video|%>
+	
+			<article><a href="/video/<%= video.unique_id %>"><%= video.title %></a></article>
+		<%end%>
+	</div>
+</section>
+
