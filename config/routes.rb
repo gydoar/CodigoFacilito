@@ -1,6 +1,7 @@
 Codigofacilito::Application.routes.draw do
   match "app/" => 'app#index'
   resources :video
+  resources :cursos
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

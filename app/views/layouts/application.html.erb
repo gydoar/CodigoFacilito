@@ -20,6 +20,10 @@
 					<li class="sI">
 						<a href="#">Cursos</a>
 						<ul>
+							<% @sus.each do |playlist| %>
+								<li><%= link_to playlist.title, "/cursos/#{playlist.playlist_id}"%></li>
+							<%end%>
+
 							<li><a href="/cursos/python">Python</a></li>
 							<li><a href="/cursos/js">JavaScript &amp; jQuery</a></li>
 							<li><a href="/cursos/ruby">Ruby</a></li>
@@ -44,7 +48,12 @@
 	</footer>
 
 	<section id="temario">
-
+		<ul id="temario python">
+			<li id="4RzkDG9qXP4">1.- Curso de Desarrollo Web desde CERO | ¿Qué es HTML y que es HTML5?</li>
+			<li id="KlzkDG9q094">Otro</li>
+			<li id="4RzkDfGq564">...</li>
+			<li id="5YtkDG9qFG4">...</li>
+		</ul>
 	</section>
 
 </body>
