@@ -1,53 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link href='http://fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css' />
-	<title>CodigoFacilito - Alpha 0.1</title>
-</head>
-<body>
-	<header>
-		<section id="hp">
-			<section id="eye">
-				<img src="assets/l/logo.png" alt="CF"/>
-			</section>
-			<nav>
-				<ul>
-					<li class="sI"><a href="/acercade">Acerca de</a></li>
-					<li class="sI">
-						<a href="#">Cursos</a>
-						<ul>
-							<li><a href="/cursos/python">Python</a></li>
-							<li><a href="/cursos/js">JavaScript &amp; jQuery</a></li>
-							<li><a href="/cursos/ruby">Ruby</a></li>
-							<li><a href="/cursos/java">Java</a></li>
-						</ul>
-					</li>
-				</ul>
-				<div id="searcher"></div>
-			</nav>
-		</section>
-	</header>
-		
+	
 	<section id="brain">
 		<h2 id="pTitle">¡Atr&eacute;vete a iniciar!</h2>
 		<h3 id="descTitle"></h3>
+		
 		<% @playlist.videos.each do |video|%>
-			<img src="http://img.youtube.com/vi/<%= video.unique_id%>/0.jpg" style='width:20%;'>
+			<a href="/video/<%= video.unique_id %>"><img src="<%= video.thumbnails[1].url %>" style='width:20%;'></a>
 		<%end%>
 	</section>
-
-	<footer>
-		<section id="fcont">
-			<div id="fsocial">
-				<a href="http://facebook.com/codigofacilito" target="_blank"><%= image_tag 'somacro/f.png' %></a>
-				<a href="http://youtube.com/user/codigofacilito" target="_blank"><%= image_tag 'somacro/y.png' %></a>
-				<a href="http://twitter.com/codigofacilito" target="_blank"><%= image_tag 'somacro/t.png' %></a>
-			</div>
-		</section>
-	</footer>
-
-	<section id="temario">
-
-	</section>
-</body>
-</html>
