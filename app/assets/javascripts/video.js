@@ -4,9 +4,9 @@ $(function(){
 	$('#show_topics').on('click',function(){
 		if(visible){
 			topics.slideUp();
-			visible = true;
-		}else{
 			visible = false;
+		}else{
+			visible = true;
 			topics.slideDown();
 		}
 	})

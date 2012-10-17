@@ -36,6 +36,7 @@ $textColor: #000;
 #topics{	
 	@include defaultBox;
 
+	display: none;
 	color: $textColor;
 	#topicsTitle{
 		@include defaultBox;
@@ -51,7 +52,6 @@ $textColor: #000;
 			
 			@include defaultBox;
 			padding: 0 0.5em;
-			display: none;
 			&:hover{
 				background: #0a562f;
 			}

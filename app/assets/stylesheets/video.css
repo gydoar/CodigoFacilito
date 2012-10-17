@@ -16,6 +16,7 @@
 #topics {
   display: block;
   margin: 0 auto;
+  display: none;
   color: black; }
   #topics #topicsTitle {
     display: block;
@@ -29,8 +30,7 @@
     #topics ul li {
       display: block;
       margin: 0 auto;
-      padding: 0 0.5em;
-      display: none; }
+      padding: 0 0.5em; }
       #topics ul li:hover {
         background: #0a562f; }
       #topics ul li a {
