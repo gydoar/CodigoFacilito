@@ -1,14 +1,34 @@
-<section id='content'>
+
+	<section id="playlistInfo">
+		<h2 id="playList"><%= @playlist.title %></h2>
+		<a href="#" id="show_topics">Ver temario</a>
+	</section>
+	
+
+
+	<section id="topics">
+
+					<ul id="listOfTopics">
+						<% @playlist.videos.each do |video|%>
+							<li><a href="/video/<%= video.unique_id %>"><%= video.title %></a></li>
+						<%end%>
+					</ul>
+
+	</section>
+
+	
+
+	<h3 id="videoTitle">
+		<span>-</span><%= @playlist.videos[0].title %>
+	</h3>
 	
 	<div id='video'>
-		<iframe class="" id="" type="text/html" width="595" height="490" src="<%= @playlist.videos[0].embed_url %>" frameborder="0"></iframe>
+		<iframe id="videoFrame" type="text/html" width="595" height="490" src="<%= @playlist.videos[0].embed_url %>" frameborder="0"></iframe>
 	</div>
-	<div id='desc'>
-		<h2 id='pTitle'><%= @playlist.title %></h2>
-		<% @playlist.videos.each do |video|%>
-	
-			<article><a href="/video/<%= video.unique_id %>"><%= video.title %></a></article>
-		<%end%>
+
+	<div id='social'>
+		<%= render 'social' %>
 	</div>
-</section>
+
+
 
