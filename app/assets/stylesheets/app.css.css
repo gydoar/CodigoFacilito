@@ -11,6 +11,10 @@ body, html {
   font-size: 10px;
   color: #FFF;
   width: 100%; }
+  body a, html a {
+    text-decoration: none; }
+    body a:hover, body a:visited, html a:hover, html a:visited {
+      text-decoration: none; }
 
 header {
   background: url("b/hpatt.jpg");
@@ -19,6 +23,7 @@ header {
   position: relative; }
 
 #brain {
+  color: #000;
   background: url("b/mpatt.jpg");
   margin: 0 auto;
   width: 80%; }
@@ -103,7 +108,6 @@ nav {
 
 #pTitle {
   display: block;
-  padding: 2em 0 0 0;
   text-align: center;
   font-weight: bold;
   color: #000;
