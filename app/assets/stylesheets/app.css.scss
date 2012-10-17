@@ -156,4 +156,18 @@ nav{
 	font-size: $ems * 5;
 }
 
+#videosHome
+{
+	margin: 3em auto 0 auto;
+	display: block;
+	width: 80%;
+
+	.videoHome{
+		width: 33%;
+		max-width: 33.1%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
 /* Uriel */
