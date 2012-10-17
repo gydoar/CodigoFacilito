@@ -1,29 +1,29 @@
-<section id='content'>
+	<section id="cf_statistics">
+		<ul id='data_cf'>
+			<li>
+				<span class='data_data'><%= @cf.subscribers %></span>
+				<span class="data_desc">Suscriptores</span>
+			</li>
+			<li>
+				<span class='data_data'><%= (@cf.upload_views).to_s.reverse.gsub(/...(?=.)/,'\&,').reverse %></span>
+				<span class="data_desc">Reproducciones</span>
+			</li>
+			<li>
+				<span class='data_data'><%= (@cf.upload_count) %></span>
+				<span class="data_desc">Vídeos</span>
+			</li>
+		</ul>
+	</section>
 
 	<div id='video' style='text-align:center;'>
 		<h2 id='pTitle'><%= @cf.username %></h2>
 		<%= image_tag @cf.avatar %>
 	</div>
-	<div id='desc'>
-		<ul class='data_cf'>
-		<li>
-			<span class='principal'><%= @cf.subscribers %></span>
-			Suscriptores
-		</li>
-		<li>
-			<span class='principal'><%= (@cf.upload_views).to_s.reverse.gsub(/...(?=.)/,'\&,').reverse %></span>
-			Reproducciones
-		</li>
-		<li>
-			<span class='principal'><%= (@cf.upload_count) %></span>
-			Vídeos
-		</li>
-	</ul>
-	<p>Aprende Java, Javascript, jQuery, C++, PHP, HTML5, CSS, Xcode, Ruby y Python!
 
-Nuevos video tutoriales CADA DÍA. Suscríbete al canal para recibirlos recién salidos del horno.
 
-Contacto: info@flashfacilito.com</p>
-	</div>
-
-</section>
+	<section id="description">
+		<p>Aprende Java, Javascript, jQuery, C++, PHP, HTML5, CSS, Xcode, Ruby y Python! Nuevos video tutoriales CADA DÍA.</p>
+		<p> Suscríbete al canal para recibirlos recién salidos del horno.</p>
+		<p></p>
+		<p>Contacto: <strong>info@flashfacilito.com</strong></p>
+	</section>
