@@ -20,7 +20,9 @@
 						<a href="#">Cursos</a>
 						<ul>
 							<% @sus.each do |playlist| %>
-								<li><%= link_to playlist.title, "/cursos/#{playlist.playlist_id}"%></li>
+								<%unless playlist.playlist_id == "PL6F13A3556A6C7A87" %> 
+									<li><%= link_to playlist.title, "/cursos/#{playlist.playlist_id}"%></li>
+								<%end%>
 							<%end%>
 						</ul>
 					</li>
