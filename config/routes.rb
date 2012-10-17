@@ -1,5 +1,5 @@
 Codigofacilito::Application.routes.draw do
-  match "app/" => 'app#index'
+
   resources :video
   resources :cursos
   match 'acercade', to: "app#acerca_de"

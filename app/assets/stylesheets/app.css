@@ -55,18 +55,13 @@ nav {
   display: inline-block;
   position: absolute;
   bottom: 0;
-  /*height: $mxw;*/
   font-size: 2em; }
   nav a {
-    display: block;
     color: #FFF;
+    display: block;
     height: 100%;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
     text-decoration: none;
-    width: 89%; }
-    nav a:hover {
-      background: #0a562f; }
+    width: 100%; }
     nav a:visited {
       color: #FFF; }
   nav #searcher {
@@ -75,9 +70,11 @@ nav {
     list-style: none;
     vertical-align: middle; }
     nav ul .sI {
-      margin-left: 1em;
       float: left;
-      position: relative; }
+      position: relative;
+      padding: 0 1em; }
+      nav ul .sI:hover {
+        background: #0a562f; }
       nav ul .sI:hover ul {
         display: block; }
       nav ul .sI ul {
@@ -85,8 +82,12 @@ nav {
         display: none;
         position: absolute; }
         nav ul .sI ul li {
+          padding-left: 0.5em;
+          padding-right: 0.5em;
           white-space: nowrap;
           display: block; }
+          nav ul .sI ul li:hover {
+            background: #0a562f; }
 
 #eye {
   /*555x212*/
@@ -107,3 +108,5 @@ nav {
   font-weight: bold;
   color: #000;
   font-size: 5em; }
+
+/* Uriel */

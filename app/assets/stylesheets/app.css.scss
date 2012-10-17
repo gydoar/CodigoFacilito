@@ -1,14 +1,10 @@
 /*
  * Prefixes
 */
-$wk: -webkit;
-$o: -o;
-$ms: -ms;
-$moz: -moz;
+
 
 $minheight: 150px;
 $mxw: 100%;
-
 $fontBasic: 1em;
 
 *{
@@ -22,6 +18,13 @@ body,html{
 	font-size: 10px;
 	color: #FFF;
 	width: $mxw;
+	
+	a{
+		text-decoration: none;
+		&:hover,&:visited{
+			text-decoration:none;
+		}
+	}
 }
 
 header{
@@ -32,6 +35,7 @@ header{
 }
 
 #brain{
+	color: #000;
 	background: url('b/mpatt.jpg');
 	margin: 0 auto;
 	width:$mxw - 20;
@@ -77,21 +81,18 @@ nav{
 	display: inline-block;
 	position: absolute;
 	bottom: 0;
-	/*height: $mxw;*/
 	font-size: $fontBasic *2;
 
 	a{
-		&:hover{
-		background: #0a562f;};
-		&:visited{color:#FFF;}
-		display:block;
+		&:visited{
+			color:#FFF;
+		}
+		
 		color: #FFF;
+		display:block;
 		height: 100%;
-		padding-left: $fontBasic / 2;
-		padding-right: $fontBasic / 2;
-
 		text-decoration: none;
-		width: 89%;
+		width: 100%;
 	}	
 
 
@@ -103,10 +104,13 @@ nav{
 		list-style: none;
 		vertical-align: middle;
 		.sI{
-			margin-left: $fontBasic;
+
 			float:left;
 			position: relative;
-
+			padding:0 1em;
+			&:hover{
+				background: #0a562f;
+			}
 			&:hover ul{display:block;}
 
 			ul{
@@ -115,14 +119,18 @@ nav{
 				position: absolute;
 
 				li{
+					&:hover{
+						background: #0a562f;
+					}
+
+					padding-left: $fontBasic / 2;
+					padding-right: $fontBasic / 2;
 					white-space: nowrap;
 					display: block;
 				}
 			}
 		}
 	}
-
-
 }
 
 #eye{
@@ -148,4 +156,5 @@ nav{
 	color: #000;
 	font-size: $fontBasic * 5;
 }
+
 /* Uriel */

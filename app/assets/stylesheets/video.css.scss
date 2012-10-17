@@ -1,36 +1,101 @@
 // Place all the styles related to the video controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#content
-{
-	box-sizing:border-box;
-	padding: 20px;
-	#video, #desc
-	{
-		display: inline-block;
-		
+
+
+
+$textColor: #000;
+
+@mixin defaultBox{
+	display: block;
+	margin:0 auto;
+}
+
+@mixin pBox($t,$l){
+	display: block;
+	margin-top: $t;
+	margin-bottom: $t;
+	margin-left: $l;
+	margin-right: $l;
+}
+
+
+#brain{
+	padding: 3em 3em !important;
+}
+
+#video{
+	color: $textColor;
+	@include pBox(3em,auto);
+	width: 100%;
+	#videoFrame{
+		@include defaultBox;
 	}
-	#video
-	{
-		width: 50%;
+}
+
+#topics{	
+	@include defaultBox;
+
+	color: $textColor;
+	#topicsTitle{
+		@include defaultBox;
 	}
-	#desc
-	{
-		width: 40%;
-		
-		color: #000;
-		vertical-align: top;
-		p{
-			font-size: 24px;
-			padding-top: 10px;
-			margin: 2px;
-			border-top: 1px solid #999;
-		}
-		ul li
-		{
-			font-size: 24px;
-			display: block;
+
+	ul{
+		@include defaultBox;
+		background:rgba(56,56,56,0.5);
+		list-style: none;
+		width: 100%;
+
+		li{
 			
+			@include defaultBox;
+			padding: 0 0.5em;
+			display: none;
+			&:hover{
+				background: #0a562f;
+			}
+			a{
+				@include defaultBox;
+				color:#FFF;
+				font-size: 1.5em;
+				text-decoration:none;
+				padding: 0.2em 0;
+				&:hover,&:visited,&:link{
+					text-decoration:none;
+				}
+
+				&:hover{
+					color: #FFF;
+				}
+			}
+
 		}
 	}
+}
+
+#playlistInfo{
+	color:#000;
+	#playList{
+		font-size: 4em;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	#show_topics{
+		cursor: pointer;
+		color: #FFF;
+		background: rgba(56,56,56,0.8);
+		padding: 0.3em;
+		font-weight: bold;
+		margin-left: 1em;
+		a{
+			text-decoration: none;
+		}
+	}
+}
+
+#videoTitle{
+	color: $textColor;
+	font-size: 2.5em;
 }
