@@ -38,7 +38,7 @@ header{
 	color: #000;
 	background: url('b/mpatt.jpg');
 	margin: 0 auto;
-	width:$mxw - 20;
+	width: $mxw - 20;
 }
 
 #hp{
@@ -46,6 +46,15 @@ header{
 	margin: 0 auto;
 	height: $mxw;
 	width: $mxw - 20;
+}
+
+header,footer,#brain{
+	min-width: 300px;
+}
+
+#videoFrame{
+  	display: block;
+  	max-width: 100%;
 }
 
 footer{
@@ -141,6 +150,7 @@ nav{
 }
 
 #eye img{
+	min-width: 323px;
 	width: 100%;
 }
 
@@ -223,3 +233,29 @@ nav{
 	}
 }
 /* Uriel */
+
+/*Responsive*/
+@media all and (max-width: 400px){
+  nav{
+  	display: block;
+  	ul{
+  		.sI{
+  			display: block;
+  		}
+  	}
+  }
+
+  
+
+  #hp{
+  	height: auto;
+  	#eye{
+  		display: block;
+  		width: 100%;
+  		img{
+  			min-width: 100px;
+  			max-width: 100%;
+  		}
+  	}
+  }
+}

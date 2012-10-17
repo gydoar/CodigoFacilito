@@ -34,6 +34,13 @@ header {
   height: 100%;
   width: 80%; }
 
+header, footer, #brain {
+  min-width: 300px; }
+
+#videoFrame {
+  display: block;
+  max-width: 100%; }
+
 footer {
   background: url("b/fpatt.jpg");
   min-height: 75px;
@@ -101,6 +108,7 @@ nav {
   height: 100%; }
 
 #eye img {
+  min-width: 323px;
   width: 100%; }
 
 #searcher {
@@ -164,3 +172,18 @@ nav {
         -webkit-transition: all 1s ease; }
 
 /* Uriel */
+/*Responsive*/
+@media all and (max-width: 400px) {
+  nav {
+    display: block; }
+    nav ul .sI {
+      display: block; }
+
+  #hp {
+    height: auto; }
+    #hp #eye {
+      display: block;
+      width: 100%; }
+      #hp #eye img {
+        min-width: 100px;
+        max-width: 100%; } }
