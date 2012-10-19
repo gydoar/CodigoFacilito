@@ -12,9 +12,12 @@ class VideoController < ApplicationController
 		
 		@sus = client.playlists("codigofacilito")
 		@sus.each do |playlist|
+			if playlist.playlist_id == "PLAB8000C00E2814CB"
+				next
+			end
 			pl = client.playlist(playlist.playlist_id)
 			pl.videos.each do |video|
-				if video.unique_id == params[:id]
+				if video.unique_id == params[:id] && playlist
 					@current_playlist = pl
 				end
 			end
