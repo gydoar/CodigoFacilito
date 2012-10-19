@@ -8,6 +8,8 @@ class CursosController < ApplicationController
 			@playlist = client.playlist(params[:id])
 			if @playlist.nil?
 				redirect_to root_path
+			else
+				@titulo = @playlist.title
 			end
 		rescue Exception => e
 			redirect_to root_path

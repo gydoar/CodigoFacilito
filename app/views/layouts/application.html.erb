@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CodigoFacilito - Alpha 0.1</title>
+  <title>
+  	<% if @titulo %>
+  		<%= @titulo %> en Codigofacilito
+  	<%else%>
+  		CodigoFacilito - Alpha 0.1
+  	<%end%>
+  </title>
 	<!--[if lt IE 9]>
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
