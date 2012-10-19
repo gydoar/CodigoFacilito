@@ -1,7 +1,7 @@
 	<section id="cf_statistics">
 		<ul id='data_cf'>
 			<li>
-				<span class='data_data'><%= @cf.subscribers %></span>
+				<span class='data_data'><%= (@cf.subscribers)to_s.reverse.gsub(/...(?=.)/,'\&,').reverse %></span>
 				<span class="data_desc">Suscriptores</span>
 			</li>
 			<li>
