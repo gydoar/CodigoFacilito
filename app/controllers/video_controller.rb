@@ -1,4 +1,5 @@
 class VideoController < ApplicationController
+	layout "video"
 	def index
 		redirect_to root_path
 	end	
