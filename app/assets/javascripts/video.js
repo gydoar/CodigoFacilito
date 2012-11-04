@@ -2,7 +2,6 @@ $(function(){
 	var visible = false;
 	var visible_languages = false;
 	var visible_editor = false;	
-	var editor = ace.edit("editor");
 	topics = $("#topics");
 	
 	$("#download").on("click",function(){
