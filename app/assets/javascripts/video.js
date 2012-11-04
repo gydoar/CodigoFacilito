@@ -1,5 +1,29 @@
-
+var editor = ace.edit("editor");
+editor.setTheme("ace/theme/clouds_midnight");
+editor.getSession().setMode("ace/mode/ruby");
+editor.resize();
 $(function(){
+	var dark = true;
+			
+	    	$(".pick ").on("click",function(){
+				var s = $(this);
+				editor.getSession().setMode("ace/mode/"+s.data("l"));
+				$("#languages").slideUp();
+				$('#show_languages').text('Seleccionar lenguaje');
+			});
+			$("#l_o_d").on("click",function(){
+				if(dark) {
+					$(this).text("Dark");
+					editor.setTheme("ace/theme/clouds");
+					dark = false;
+				}
+				else{
+					$(this).text("Light");
+					editor.setTheme("ace/theme/clouds_midnight");
+					dark = true;
+				}
+
+			});
 	var visible = false;
 	var visible_languages = false;
 	var visible_editor = false;	
