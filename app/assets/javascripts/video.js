@@ -1,8 +1,9 @@
-var editor = ace.edit("editor");
-editor.setTheme("ace/theme/clouds_midnight");
-editor.getSession().setMode("ace/mode/ruby");
-editor.resize();
+	
 $(function(){
+	var editor = ace.edit("editor");
+	editor.setTheme("ace/theme/clouds_midnight");
+	editor.getSession().setMode("ace/mode/ruby");
+	editor.resize();
 	var dark = true;
 			
 	    	$(".pick ").on("click",function(){
