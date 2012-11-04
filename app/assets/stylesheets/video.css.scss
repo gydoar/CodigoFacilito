@@ -12,16 +12,15 @@ $textColor: #000;
 }
 
 @mixin pBox($t,$l){
-	display: block;
+	display: inline-block;
+	left: -200px;
 	margin-top: $t;
 	margin-bottom: $t;
-	margin-left: $l;
-	margin-right: $l;
 }
 
 
 #brain{
-	padding: 3em 3em !important;
+	padding: 1em 1em !important;
 }
 
 #video{
@@ -29,11 +28,24 @@ $textColor: #000;
 	@include pBox(3em,auto);
 	width: 100%;
 	#videoFrame{
-		@include defaultBox;
+		//@include defaultBox;
+		float: left;
+
 	}
 }
-
-#topics{	
+#m_video{
+	width: 60%;
+}
+#a_video{
+	width: 35%;
+	text-align: right;
+}
+#m_video, #a_video{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 2%;
+}
+#topics,#languages{	
 	@include defaultBox;
 
 	display: none;
@@ -82,13 +94,13 @@ $textColor: #000;
 		vertical-align: middle;
 	}
 
-	#show_topics{
+	.button{
 		cursor: pointer;
 		color: #FFF;
 		background: rgba(56,56,56,0.8);
 		padding: 0.3em;
 		font-weight: bold;
-		margin-left: 1em;
+		margin-left: 0.1em;
 		text-decoration: none;
 		a{
 			text-decoration: none;
@@ -108,4 +120,22 @@ $textColor: #000;
 #social{
 	@include defaultBox;
 	width: 200px;
+}
+#editor{
+	position: absolute;
+	display: none;
+	width: 40%;
+	height: 780px;
+	overflow: hidden;
+    top:150px;
+    right:0px;
+    textarea{
+    	width: 40%;
+    	height: 780px;
+    	border: solid;
+    	border-color: #FFF;
+    }
+}
+#show_languages,#l_o_d{
+	display: none;
 }

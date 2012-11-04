@@ -1,11 +1,14 @@
-	<% if @current_playlist %>
-
 	<section id="playlistInfo">
+		<% if @current_playlist %>
 		<h2 id="playList"><%= @current_playlist.title %></h2>
-		<a href="#" id="show_topics">Ver temario</a>
+		<a href="#" id="show_topics" class='button'>Ver temario</a>		
+		<%end%>		
+		<a href="#" id="show_editor" class='button'>Abrir editor de texto</a>
+		<a href="#" id="show_languages" class='button'>Seleccionar lenguaje</a>
+		<a href="#" id="l_o_d" class='button'>Light</a>
 	</section>
 	
-	<%end%>
+	
 
 	<section id="topics">
 				<% if @current_playlist %>
@@ -16,19 +19,66 @@
 					</ul>
 				<%end%>
 	</section>
-
+	<section id="languages">
+					<ul id="listOfTopics">
+						<% @languages.each do |l|%>
+						<li><a href="#" data-l="<%= l %>" class='pick'><%= l.capitalize %></a></li>
+						<%end%>
+					</ul>
+	</section>
 	
 
-	<h3 id="videoTitle">
-		<span>-</span><%= @video.title %>
-	</h3>
-	
-	<div id='video'>
-		<iframe id="videoFrame" type="text/html" width="595" height="490" src="<%= @video.embed_url %>" frameborder="0"></iframe>
+	<article id='m_video'>
+		<h3 id="videoTitle">
+			<span>-</span><%= @video.title %>
+		</h3>
+		768,432
+		<div id='video'>
+			<iframe id="videoFrame" type="text/html" width="853" height="480" src="<%= @video.embed_url %>" frameborder="0"></iframe>
+		</div>
+	</article>
+	<aside id='a_video'>
+		<%= render 'like_box' %>
+	</aside>
+	<div id="editor">#El lenguaje por defecto es Ruby
+#Haz clic en el botón seleccionar lenguaje para cambiar 
+#el lenguaje  del editor
 	</div>
+	    
+	<script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+			var editor = ace.edit("editor");
+	    	editor.setTheme("ace/theme/clouds_midnight");
+	    	editor.getSession().setMode("ace/mode/ruby");
+	    	editor.resize();
+		$(function(){
+			var dark = true;
+			
+	    	$(".pick ").on("click",function(){
+				var s = $(this);
+				editor.getSession().setMode("ace/mode/"+s.data("l"));
+				$("#languages").slideUp();
+				$('#show_languages').text('Seleccionar lenguaje');
+			});
+			$("#l_o_d").on("click",function(){
+				if(dark) {
+					$(this).text("Dark");
+					editor.setTheme("ace/theme/clouds");
+					dark = false;
+				}
+				else{
+					$(this).text("Light");
+					editor.setTheme("ace/theme/clouds_midnight");
+					dark = true;
+				}
 
+			});
+		});
+		
+	</script>
 	<div id='social'>
 		<%= render 'social' %>
+
 	</div>
 
 
