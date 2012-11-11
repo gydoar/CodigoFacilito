@@ -19,7 +19,7 @@ $textColor: #000;
 }
 
 
-#brain{
+#main{
 	padding: 1em 1em !important;
 }
 
@@ -114,8 +114,12 @@ $textColor: #000;
 #videoTitle{
 	color: $textColor;
 	font-size: 2.5em;
+	padding: 0px;
+	margin: 0px;
 }
-
+#a_v li{
+	padding:10px;
+}
 #social{
 	@include defaultBox;
 	width: 200px;
@@ -123,14 +127,14 @@ $textColor: #000;
 #editor{
 	position: absolute;
 	display: none;
-	width: 40%;
-	height: 780px;
+	width: 38%;
+	height: 690px;
 	overflow: hidden;
-    top:150px;
+    top:290px;
     right:0px;
     textarea{
-    	width: 40%;
-    	height: 780px;
+    	width: 38%;
+    	height: 690px;
     	border: solid;
     	border-color: #FFF;
     }

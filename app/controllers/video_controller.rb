@@ -1,4 +1,4 @@
-class VideoController < ApplicationController
+	class VideoController < ApplicationController
 	def index
 		redirect_to root_path
 	end	
@@ -17,14 +17,24 @@ class VideoController < ApplicationController
 		end
 		
 		@sus = client.playlists("codigofacilito")
+		
 		@sus.each do |playlist|
 			if playlist.playlist_id == "PLAB8000C00E2814CB"
+				
 				next
 			end
 			pl = client.playlist(playlist.playlist_id)
+			counter = -1
 			pl.videos.each do |video|
+				counter += 1
 				if video.unique_id == params[:id] && playlist
 					@current_playlist = pl
+					unless counter == (pl.videos.size-1)
+						@next_v = pl.videos[counter+1]
+					end
+					unless counter == 0
+						@l_v = pl.videos[counter-1]
+					end
 				end
 			end
 		end

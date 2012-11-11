@@ -6,6 +6,7 @@
 		<a href="#" id="show_editor" class='button'>Abrir editor de texto</a>
 		<a href="#" id="show_languages" class='button'>Seleccionar lenguaje</a>
 		<a href="#" id="l_o_d" class='button'>Light</a>
+		
 	</section>
 	
 	
@@ -27,24 +28,45 @@
 					</ul>
 	</section>
 	
-
-	<article id='m_video'>
-		<h3 id="videoTitle">
-			<span>-</span><%= @video.title %>
-		</h3>
-		768,432
-		<div id='video'>
-			<iframe id="videoFrame" type="text/html" width="853" height="480" src="<%= @video.embed_url %>" frameborder="0"></iframe>
+	<div class='row'>
+		<div class='span9'>
+			<article >
+				<h3 id="videoTitle">
+					<%= @video.title %>
+				</h3>
+				<div id='video'>
+					<iframe id="videoFrame" type="text/html" width="853" height="480" src="<%= @video.embed_url %>" frameborder="0"></iframe>
+				</div>
+			</article>
 		</div>
-	</article>
-
+		<div class='span4'>
+			<aside id='a_v'>
+				<h2>Acerca de</h2>
+				<ul>
+					<li><strong>Duración:</strong> <%= (@video.duration)/60 %>mins aprox.</li>
+					<li><strong>Visitas:</strong> <%= @video.view_count %></li>
+					<li><strong>Favoritos:</strong> <%= @video.favorite_count %></li>
+					<li><strong>Comentarios:</strong> <%= @video.comment_count %></li>
+					<li><strong>Publicado:</strong>  <%= distance_of_time_in_words(@video.published_at, Date.today ) %> ago</li>
+				</ul>
+				<div id='playlistInfo' style='text-align:center;margin:10px;'>
+				<%if @l_v%>
+					<a href="/video/<%= @l_v.unique_id %>" class='button'>Vídeo anterior</a>
+				<%end%>
+				<%if @next_v%>
+					<a href="/video/<%= @next_v.unique_id %>" class='button'>Siguiente vídeo</a>
+				<%end%>
+				</div>
+				<div id='social'>
+					<%= render 'social' %>
+				</div>
+			</aside>
+		</div>
+	</div>
 	<div id="editor">#El lenguaje por defecto es Ruby
 #Haz clic en el botón seleccionar lenguaje para cambiar 
 #el lenguaje  del editor
 	</div>
 	    
 	
-	<div id='social'>
-		<%= render 'social' %>
-
-	</div>
+	

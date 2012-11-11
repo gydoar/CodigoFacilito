@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang='es'>
 <head>
   <title>
   	<% if @titulo %>
   		<%= @titulo %> en @Codigofacilito
   	<%else%>
-  		CodigoFacilito - Alpha 0.1
+  		CodigoFacilito - Alpha 0.2
   	<%end%>
   </title>
 	<!--[if lt IE 9]>
@@ -15,8 +15,10 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link href='http://fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css' />
+  
 
   <script type="text/javascript">
 
@@ -32,13 +34,11 @@
 
 </script>
 </head>
-<body>
+<body id='b'>
 	<header>
-		<section id="hp">
-			<section id="eye">
-				<%= link_to (image_tag('l/logo.png')), root_path %>
-			</section>
-			<nav>
+		<section id="hp" class='row'>
+		<%= link_to (image_tag('l/logo.png',style:'width:20%;')), root_path, class: 'no_ajaxify' %>	
+			<nav class='span6 offset7' id='n'>
 				<ul>
 					<li class="sI"><a href="/acercade">Acerca de</a></li>
 					<li class="sI">
@@ -62,22 +62,54 @@
 							<li><%= link_to "Curso de ActionScript 3 básico", "/cursos/PLDAEB6530B43489BD"%></li>
 						</ul>
 					</li>
+					<li class="sI"><a href="/">Tutores</a></li>
 				</ul>
 				<div id="searcher"></div>
 			</nav>
+			
 		</section>
+			<section id='slid'>
+				<div id='t'>
+					<hgroup>
+						<h1>Aprende a Programar</h1>
+						<h2>Java,Python,Ruby,javaScript,PHP y más</h2>
+					</hgroup>
+				</div>
+				<%= image_tag('l/pc.png',style:"width:35%;") %>
+			</section>
 	</header>
-	<section id="brain">
+	<section id="main">
 		<%= yield %>
 	</section>
 <footer>
-		<section id="fcont">
-			<div id="fsocial">
-				<a href="http://facebook.com/codigofacilito" target="_blank"><%= image_tag 'somacro/f.png' %></a>
-				<a href="http://youtube.com/user/codigofacilito" target="_blank"><%= image_tag 'somacro/y.png' %></a>
-				<a href="http://twitter.com/codigofacilito" target="_blank"><%= image_tag 'somacro/t.png' %></a>
+		<div id='insite'>
+			<h2>Contact</h2>
+			<div class='row'>
+				<div class='span4'>
+					<h3>¡Hola!</h3>
+					<ul>
+						<li>¿Quieres ser tutor?</li>
+						<li>Cuéntanos en <strong>info@flashfacilito.com</strong></li>
+					</ul>
+				</div>
+				<div class='span4'>
+					<h3>¡Aquí estamos!</h3>
+					<ul>
+						<li><%= image_tag 'somacro/f.png' %><a href="http://facebook.com/codigofacilito">Facebook</a></li>
+						<li><%= image_tag 'somacro/t.png' %><a href="https://twitter.com/codigofacilito">Twitter</a></li>
+						<li><%= image_tag 'somacro/y.png' %><a href="https://youtube.com/codigofacilito">Youtube</a></li>
+					</ul>
+				</div>
+				<div class='span4'>
+					<h3>Próximos cursos</h3>
+					<ul>
+						<li>Wordpress</li>
+						<li>JAVA Visual</li>
+						<li>Juegos con HTML5</li>
+					</ul>
+				</div>
 			</div>
-		</section>
+		</div>
 	</footer>
 <!--
 	-->

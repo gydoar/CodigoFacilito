@@ -1,10 +1,43 @@
+		<div class='row'>
+			<div class='span8' style='margin-right:6em;'>
+				<div id='last_v'>
+					<hgroup>
+						<h2 >Novedad</h2>
+						<h1 class='s_t'><%=@videos.videos[0].title%></h1>
+					</hgroup>
+					<iframe  type="text/html" width="615" height="346" src="<%= @videos.videos[0].embed_url %>" frameborder="0"></iframe>
+				</div>
+				<h2 class='s_t'>¡Atr&eacute;vete a iniciar!</h2>
+				<section id="videosHome">
+					<% @playlist.videos.each do |video|%>
+						<article class="videoHome">
+							<a href="/video/<%= video.unique_id %>"><img src="<%= video.thumbnails[1].url %>"></a>
+						</article>
+					<%end%>
+				</section>
+				
+				
+			</div>
+
+			<div class='span4'>
+				<a class="twitter-timeline" href="https://twitter.com/codigofacilito" data-widget-id="267315499870846976">Tweets por @codigofacilito</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			<aside>
+				<hgroup>
+					<h2>Cursos</h2>
+				</hgroup>
+				<ul>
+					<% @sus.each do |playlist| %>
+						<%unless playlist.playlist_id == "PL6F13A3556A6C7A87" %> 
+							<li><%= link_to playlist.title, "/cursos/#{playlist.playlist_id}"%></li>
+						<%end%>
+					<%end%>
+				</ul>
+			</aside>
+			</div>
+			
+		</div>
 		<div id='editor'></div>
-		<h2 id="pTitle">¡Atr&eacute;vete a iniciar!</h2>
-		<section id="videosHome">
-			<% @playlist.videos.each do |video|%>
-				<article class="videoHome">
-					<a href="/video/<%= video.unique_id %>"><img src="<%= video.thumbnails[1].url %>"></a>
-				</article>
-			<%end%>
-		</section>
+		
+
 
