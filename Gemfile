@@ -5,8 +5,8 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-#gem 'pg'
-gem 'sqlite3'
+gem 'pg'
+#gem 'sqlite3'
 
 
 # Gems used only for assets and not required
@@ -20,7 +20,6 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-gem 'ajaxify_rails'
 gem 'jquery-rails'
 gem 'youtube_it'
 gem 'youtube_search'

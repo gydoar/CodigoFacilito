@@ -44,10 +44,11 @@
 				<h2>Acerca de</h2>
 				<ul>
 					<li><strong>Duración:</strong> <%= (@video.duration)/60 %>mins aprox.</li>
-					<li><strong>Visitas:</strong> <%= @video.view_count %></li>
-					<li><strong>Favoritos:</strong> <%= @video.favorite_count %></li>
+					<li><strong>Visitas:</strong> <%= (@video.view_count).to_s.reverse.gsub(/...(?=.)/,'\&,').reverse %></li>
+					<li><strong>Me gusta:</strong> <%= @video.rating.likes %></li>
 					<li><strong>Comentarios:</strong> <%= @video.comment_count %></li>
 					<li><strong>Publicado:</strong>  <%= distance_of_time_in_words(@video.published_at, Date.today ) %> ago</li>
+
 				</ul>
 				<div id='playlistInfo' style='text-align:center;margin:10px;'>
 				<%if @l_v%>
