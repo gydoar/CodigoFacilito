@@ -15,20 +15,40 @@
 					</ul>
 
 	</section>
+	<div class='row'>
+		<div class='span9'>
+			<article >
+				<h3 id="videoTitle">
+					<span>-</span><%= @playlist.videos[0].title %>
+				</h3>
+				<div id='video'>
+			<iframe id="videoFrame" type="text/html" width="595" height="490" src="<%= @playlist.videos[0].embed_url %>" frameborder="0"></iframe>
+			</div>
+			</article>
+		</div>
+		<div class='span4'>
+			<aside id='a_v'>
+				<h2>Acerca de</h2>
+				<ul>
+					<li><strong>Duración:</strong> <%= (@dur)/60 %>mins aprox.</li>
+					<li><strong>Visitas:</strong> <%= (@total_v).to_s.reverse.gsub(/...(?=.)/,'\&,').reverse %></li>
+					<li><strong>Me gusta:</strong> <%= @likes %></li>
+					<li><strong>Comentarios:</strong> <%= @com %></li>
 
-	
-
-	<h3 id="videoTitle">
-		<span>-</span><%= @playlist.videos[0].title %>
-	</h3>
-	
-	<div id='video'>
-		<iframe id="videoFrame" type="text/html" width="595" height="490" src="<%= @playlist.videos[0].embed_url %>" frameborder="0"></iframe>
+				</ul>
+				<div id='playlistInfo' style='text-align:center;margin:10px;'>
+				<%if @l_v%>
+					<a href="/video/<%= @l_v.unique_id %>" class='button'>Vídeo anterior</a>
+				<%end%>
+				<%if @next_v%>
+					<a href="/video/<%= @next_v.unique_id %>" class='button'>Siguiente vídeo</a>
+				<%end%>
+				</div>
+				<div id='social'>
+					<%= render 'social' %>
+				</div>
+			</aside>
+		</div>
 	</div>
-
-	<div id='social'>
-		<%= render 'social' %>
-	</div>
-
 
 
