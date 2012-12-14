@@ -14,10 +14,16 @@ class AppController < ApplicationController
 	end
 	def tutores
 		client = YouTubeIt::Client.new(:dev_key => "AI39si5Oce1nyi_aXOAFVoD8j0aztUkuH1ZmvTfCvme5h-TPbuJD-NexHVuRuBP2U-2mK144ruhuEEfCwT5cDATsfGBo6ufc0Q")
-		@tutores = Hash.new()
-		@tutores['dxv'] = client.profile("codigofacilito")
-		@tutores['rfdz'] = client.profile("roofdierdz")
-		@tutores['xymind'] = client.profile("xymind")
-		@tutores['soloprog'] = client.profile("soloprogramacion")
+		@sus = client.playlists("codigofacilito")
+		@playlist = client.playlist("PLAB8000C00E2814CB")
+		@tutores = Array.new()
+		@tutores << client.profile("dxvtuts")
+		@tutores << client.profile("roofdierdz")
+		@tutores << client.profile("xymind")
+		@tutores << client.profile("soloprogramacion")
+		@tutores << client.profile("SomosProgramadores")
+		@tutores << client.profile("pseintsencillo")
+		
+		
 	end
 end

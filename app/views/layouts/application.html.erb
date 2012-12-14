@@ -13,7 +13,7 @@
 	<![endif]-->
 	<script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag :application %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -62,7 +62,7 @@
 							<li><%= link_to "Curso de ActionScript 3 básico", "/cursos/PLDAEB6530B43489BD"%></li>
 						</ul>
 					</li>
-					<li class="sI"><a href="/">Tutores</a></li>
+					<li class="sI"><a href="/tutores">Tutores</a></li>
 				</ul>
 				<div id="searcher"></div>
 			</nav>
