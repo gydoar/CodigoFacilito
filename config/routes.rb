@@ -3,6 +3,7 @@ Codigofacilito::Application.routes.draw do
   resources :video
   resources :cursos
   match 'acercade', to: "app#acerca_de"
+  match 'tutores', to: "app#tutores"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
