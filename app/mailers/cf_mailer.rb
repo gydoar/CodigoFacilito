@@ -13,6 +13,6 @@ class CfMailer < ActionMailer::Base
     if(data[:url])
       @url = data[:url]
     end
-    mail(:to => "projectdxv@gmail.com", :subject => "Contacto en Codigo Facilito")
+    mail(:to => "uriel.hdzc@gmail.com ", :subject => "Contacto en Codigo Facilito")
   end
 end
