@@ -4,6 +4,7 @@ Codigofacilito::Application.routes.draw do
   resources :cursos
   match 'acercade', to: "app#acerca_de"
   match 'tutores', to: "app#tutores"
+  match 'contacto', to: "app#contacto"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
