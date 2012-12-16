@@ -253,58 +253,6 @@ nav{
 	}
 }
 
-
-
-#description{
-	display: block;
-	margin: 3em auto;
-	width: 80%;
-	font-size: 3em;
-	text-align: center;
-}
-
-#cf_statistics{
-
-
-	display: block;
-	width: 45%;
-	margin: 0 auto;
-	#data_cf{
-		width: 100%;
-		list-style: none;
-
-		li{
-			border: 1px solid #0a562f;
-			border-width: 0.4em 0.4em 1.5em 0.4em;
-			max-width: 33.3%;
-			display: inline-block;
-			vertical-align: middle;
-			width: 31%;
-			cursor: pointer;
-
-				transition: all 1s ease;
-				-moz-transition: all 1s ease;
-				-o-transition: all 1s ease;
-				-webkit-transition: all 1s ease;
-			span{
-				font-weight: bold;
-				font-size: 2em;
-				display: block;
-				width: 100%;
-				text-align: center;
-			}
-
-			&:hover{
-				color:#FFF;
-				background: rgba(10,86,47,0.6);
-				transition: all 1s ease;
-				-moz-transition: all 1s ease;
-				-o-transition: all 1s ease;
-				-webkit-transition: all 1s ease;
-			}
-		}
-	}
-}
 /* Tutores page */
 .tutor{
 	display: inline-block;

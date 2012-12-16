@@ -1,8 +1,10 @@
 Codigofacilito::Application.routes.draw do
 
+  get "acercade/index"
+
   resources :video
   resources :cursos
-  match 'acercade', to: "app#acerca_de"
+  match 'acercade', to: "acercade#index"
   match 'tutores', to: "app#tutores"
   match 'contacto', to: "app#contacto"
   # The priority is based upon order of creation:
