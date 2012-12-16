@@ -1,0 +1,39 @@
+	
+	<h1 id='pTitle'>Código Facilito</h1>
+	<nav id='ribbon'>
+		<ul>
+			<li>Inicio</li>
+			<li>Tutores</li>
+			<li>Contacto</li>
+		</ul>
+	</nav>	
+	<section id="description">
+		
+		<p>Te enseñamos a programar en JAVA, PHP, C++. Puedes aprender Ruby, Python, Objective-C.</p>
+		<p>¿Web? Enseñamos HTML5, CSS, javasCript y jQuery.</p>
+		<p></p>
+	</section>
+
+<section id="cf_statistics">
+		<ul id='data_cf'>
+			<li>
+				<span class='data_data'><%= (@cf.subscribers).to_s.reverse.gsub(/...(?=.)/,'\&,').reverse %></span>
+				<span class="data_desc">Suscriptores</span>
+			</li>
+			<li>
+				<span class='data_data'><%= (@cf.upload_views).to_s.reverse.gsub(/...(?=.)/,'\&,').reverse %></span>
+				<span class="data_desc">Reproducciones</span>
+			</li>
+			<li>
+				<span class='data_data'><%= (@cf.upload_count) %></span>
+				<span class="data_desc">Vídeos</span>
+			</li>
+		</ul>
+	</section>
+
+	<div id='video' style='text-align:center;'>
+		
+		
+	</div>
+
+
