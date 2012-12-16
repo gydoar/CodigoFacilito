@@ -1,0 +1,32 @@
+<form action='/contacto' method='post' id='f_contacto'>
+	<% if @nombre %>
+		<h1>¡Listo <%= @nombre %>!</h1>
+		<p>Nos pondremos en contacto contigo, pronto.</p>
+		<a href="/" style='font-size:18px;'>Volver al inicio</a>
+	<% else %>
+		<h1>Escríbenos	</h1>
+		<label> Nombre: </label>
+		<input type='text' placeholder='Nombre :D' name='nombre' pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,30}$" required title='Mas de 2 letras y sin espacios :)' >
+		<label>	Mail: </label>
+		<input type='email' placeholder='¿A donde te escribimos?' name='email' required>
+		<label>	Asunto: </label>
+		<textarea placeholder='Quiero ser tutor y dar un curso de...' name='asunto' id='f_ta' required pattern=".{15,}" title='Al menos 15 letras'></textarea>
+		<label>	Demo: </label>
+		<input type='url' placeholder='Aqui debe ir la url de un vídeo' name='url'>
+		<button class='btn' type='submit'>Enviar</button>
+	<% end %>
+	
+</form>	
+<script >
+	$('#f_contacto').on('submit',function(e){
+		var s = $('#f_ta').val();
+		if(!s.match(".{3,}")){
+			e.preventDefault();
+			$('#f_ta').val("");
+			$('#f_ta').attr('placeholder',"Mínimo 15 caracteres");
+		}
+		else{
+			
+		}
+	})
+</script>
