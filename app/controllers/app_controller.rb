@@ -30,7 +30,7 @@ class AppController < ApplicationController
 		@tutores << client.profile("pseintsencillo")
 	end
 	def contacto		
-		if (params)
+		if (params[:nombre])
 			CfMailer.ser_tutor(params).deliver
 			@nombre = params[:nombre]
 		end
