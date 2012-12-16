@@ -32,7 +32,7 @@ class AppController < ApplicationController
 	def contacto		
 		if (params)
 			CfMailer.ser_tutor(params).deliver
-			@nombre = params[:nombre];
+			@nombre = params[:nombre]
 		end
 	end
 end
